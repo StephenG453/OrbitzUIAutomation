@@ -17,11 +17,17 @@ public class HomePage extends WebDriverInitiation {
     @FindBy(xpath = "//label[@id='flight-type-multi-dest-label-hp-flight']")
     private WebElement multiCityFlightsButton;
 
-    @FindBy(xpath = "//select[@id='flight-adults-hp-flight']")
-    private WebElement adultsDropDown;
+//    @FindBy(xpath = "//select[@id='flight-adults-hp-flight']")
+//    private WebElement adultsDropDown;
+//
+//    @FindBy(xpath = "//select[@id='flight-children-hp-flight']")
+//    private WebElement childrenDropDown;
 
-    @FindBy(xpath = "//select[@id='flight-children-hp-flight']")
-    private WebElement childrenDropDown;
+    /*
+        I know beforehand that we are selecting 2 children... however in a real life scenario we might know
+     */
+
+//    private WebElement
 
     @FindBy(xpath = "//input[@id='flight-origin-hp-flight']")
     private WebElement flyingFromTab1;
@@ -70,6 +76,30 @@ public class HomePage extends WebDriverInitiation {
     public void selectFlyingToTab1Value() {
         WebElement laxAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Los Angeles (LAX - Los Angeles Intl.)')]"));
         laxAirportSelection.click();
+    }
+
+    public void inputFlight1DepartureDate() {
+        flight1DepartureDate.sendKeys("07/01/2020");
+    }
+
+    public void selectNumberOfAdults() {
+        Select adultsDropdown = new Select(driver.findElement(By.xpath("//select[@id='flight-adults-hp-flight']")));
+        adultsDropdown.selectByIndex(1);
+    }
+
+    public void selectNumberOfChildren() {
+        Select childrenDropdown = new Select(driver.findElement(By.xpath("//select[@id='flight-children-hp-flight']")));
+        childrenDropdown.selectByIndex(2);
+    }
+
+    public void selectChild1Age() {
+        Select child1AgeDropdown = new Select(driver.findElement(By.xpath("//select[@id='flight-age-select-1-hp-flight']")));
+        child1AgeDropdown.selectByIndex(3);
+    }
+
+    public void selectChild2Age() {
+        Select child2AgeDropdown = new Select(driver.findElement(By.xpath("//select[@id='flight-age-select-2-hp-flight']")));
+        child2AgeDropdown.selectByIndex(5);
     }
 }
 

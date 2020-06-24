@@ -53,4 +53,29 @@ public class HomePageStepDefinitions {
     public void selectLAXAirport() {
         homePage.selectFlyingToTab1Value();
     }
+
+    @And("flight 1 departure date is inputted")
+    public void inputFlight1DepartureDate() {
+        homePage.inputFlight1DepartureDate();
+    }
+
+    @And("2 adults flying are selected")
+    public void select2AdultsFlying() {
+        homePage.selectNumberOfAdults();
+    }
+
+    @And("2 children flying are selected")
+    public void select2ChildrenFlying() {
+        homePage.selectNumberOfChildren();
+    }
+
+    @And("age of child 1 is selected")
+    public void selectChild1Age() {
+        homePage.selectChild1Age();
+    }
+
+    @And("age of child 2 is selected")
+    public void selectChild2Age() {
+        homePage.selectChild2Age();
+    }
 }

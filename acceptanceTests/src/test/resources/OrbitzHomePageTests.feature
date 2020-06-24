@@ -8,3 +8,8 @@ Feature: test ability to search for multi-city flights on the Orbitz.com home pa
     And DFW airport is selected
     And LAX is inputted into Flying to tab 1
     And LAX airport is selected
+    And flight 1 departure date is inputted
+    And 2 adults flying are selected
+    And 2 children flying are selected
+    And age of child 1 is selected
+    And age of child 2 is selected
