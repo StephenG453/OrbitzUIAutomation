@@ -6,3 +6,5 @@ Feature: test ability to search for multi-city flights on the Orbitz.com home pa
     And multi-city flights button is pressed
     And DFW is inputted into Flying from tab 1
     And DFW airport is selected
+    And LAX is inputted into Flying to tab 1
+    And LAX airport is selected

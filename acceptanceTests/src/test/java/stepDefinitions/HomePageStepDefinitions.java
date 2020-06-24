@@ -43,4 +43,14 @@ public class HomePageStepDefinitions {
     public void selectDFWAirport() {
         homePage.selectFlyingFromTab1Value();
     }
+
+    @And("LAX is inputted into Flying to tab 1")
+    public void inputFlyingToTab1Value() {
+        homePage.inputFlyingToTab1Value();
+    }
+
+    @And("LAX airport is selected")
+    public void selectLAXAirport() {
+        homePage.selectFlyingToTab1Value();
+    }
 }

@@ -59,12 +59,17 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void selectFlyingFromTab1Value() {
-        WebElement dfwAiportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Dallas (DFW - Dallas-Fort Worth Intl.)')]"));
-        dfwAiportSelection.click();
+        WebElement dfwAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Dallas (DFW - Dallas-Fort Worth Intl.)')]"));
+        dfwAirportSelection.click();
     }
 
     public void inputFlyingToTab1Value() {
+        flyingToTab1.sendKeys("LAX");
+    }
 
+    public void selectFlyingToTab1Value() {
+        WebElement laxAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Los Angeles (LAX - Los Angeles Intl.)')]"));
+        laxAirportSelection.click();
     }
 }
 
