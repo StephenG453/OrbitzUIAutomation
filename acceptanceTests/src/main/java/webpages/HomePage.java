@@ -17,18 +17,6 @@ public class HomePage extends WebDriverInitiation {
     @FindBy(xpath = "//label[@id='flight-type-multi-dest-label-hp-flight']")
     private WebElement multiCityFlightsButton;
 
-//    @FindBy(xpath = "//select[@id='flight-adults-hp-flight']")
-//    private WebElement adultsDropDown;
-//
-//    @FindBy(xpath = "//select[@id='flight-children-hp-flight']")
-//    private WebElement childrenDropDown;
-
-    /*
-        I know beforehand that we are selecting 2 children... however in a real life scenario we might know
-     */
-
-//    private WebElement
-
     @FindBy(xpath = "//input[@id='flight-origin-hp-flight']")
     private WebElement flyingFromTab1;
 
@@ -64,7 +52,12 @@ public class HomePage extends WebDriverInitiation {
         flyingFromTab1.sendKeys("DFW");
     }
 
-    public void selectFlyingFromTab1Value() {
+//    public void selectFlyingFromTab1Value() {
+//        WebElement dfwAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Dallas (DFW - Dallas-Fort Worth Intl.)')]"));
+//        dfwAirportSelection.click();
+//    }
+
+    public void selectDFWAirport() {
         WebElement dfwAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Dallas (DFW - Dallas-Fort Worth Intl.)')]"));
         dfwAirportSelection.click();
     }
@@ -73,7 +66,12 @@ public class HomePage extends WebDriverInitiation {
         flyingToTab1.sendKeys("LAX");
     }
 
-    public void selectFlyingToTab1Value() {
+//    public void selectFlyingToTab1Value() {
+//        WebElement laxAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Los Angeles (LAX - Los Angeles Intl.)')]"));
+//        laxAirportSelection.click();
+//    }
+
+    public void selectLAXAirport() {
         WebElement laxAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Los Angeles (LAX - Los Angeles Intl.)')]"));
         laxAirportSelection.click();
     }
@@ -86,6 +84,10 @@ public class HomePage extends WebDriverInitiation {
         Select adultsDropdown = new Select(driver.findElement(By.xpath("//select[@id='flight-adults-hp-flight']")));
         adultsDropdown.selectByIndex(1);
     }
+
+    /*
+        I know beforehand that we are selecting 2 children... however in a real life scenario we might not know
+     */
 
     public void selectNumberOfChildren() {
         Select childrenDropdown = new Select(driver.findElement(By.xpath("//select[@id='flight-children-hp-flight']")));
@@ -101,7 +103,22 @@ public class HomePage extends WebDriverInitiation {
         Select child2AgeDropdown = new Select(driver.findElement(By.xpath("//select[@id='flight-age-select-2-hp-flight']")));
         child2AgeDropdown.selectByIndex(5);
     }
-}
 
-// //a[@id='aria-option-1']//div[@class='multiLineDisplay details'] - DFW
-// //a[@id='aria-option-2']//div[@class='multiLineDisplay details'] - DAL
+    public void inputFlyingFromTab2Value() {
+        flyingFromTab2.sendKeys("LAX");
+    }
+
+    public void selectFlyingFromTab2Value() {
+        WebElement laxAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Los Angeles (LAX - Los Angeles Intl.)')]"));
+        laxAirportSelection.click();
+    }
+
+    public void inputFlyingToTab2Value() {
+        flyingToTab2.sendKeys("CHI");
+    }
+
+    public void selectCHIAirport() {
+        WebElement chiAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),\"Chicago (ORD - O'Hare Intl.)\")]"));
+        chiAirportSelection.click();
+    }
+}

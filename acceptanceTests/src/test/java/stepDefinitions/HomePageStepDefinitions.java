@@ -41,7 +41,8 @@ public class HomePageStepDefinitions {
 
     @And("DFW airport is selected")
     public void selectDFWAirport() {
-        homePage.selectFlyingFromTab1Value();
+//        homePage.selectFlyingFromTab1Value();
+        homePage.selectDFWAirport();
     }
 
     @And("LAX is inputted into Flying to tab 1")
@@ -51,7 +52,8 @@ public class HomePageStepDefinitions {
 
     @And("LAX airport is selected")
     public void selectLAXAirport() {
-        homePage.selectFlyingToTab1Value();
+//        homePage.selectFlyingToTab1Value();
+        homePage.selectLAXAirport();
     }
 
     @And("flight 1 departure date is inputted")
@@ -77,5 +79,20 @@ public class HomePageStepDefinitions {
     @And("age of child 2 is selected")
     public void selectChild2Age() {
         homePage.selectChild2Age();
+    }
+
+    @And("LAX is inputted into Flying from tab 2")
+    public void inputFlyingFromTab2Value() {
+        homePage.inputFlyingFromTab2Value();
+    }
+
+    @And("CHI is inputted into Flying to tab 2")
+    public void inputFlyingToTab2Value() {
+        homePage.inputFlyingToTab2Value();
+    }
+
+    @And("CHI airport is selected")
+    public void selectCHIAirport() {
+        homePage.selectCHIAirport();
     }
 }

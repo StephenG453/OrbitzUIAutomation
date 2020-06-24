@@ -1,6 +1,6 @@
 Feature: test ability to search for multi-city flights on the Orbitz.com home page
 
-  Scenario: Verification that 2 adults and 2 children can search for a roundtrip consisting of 3 flights
+  Scenario: Verification that 2 adults and 2 children can search for a round-trip consisting of 3 flights
     Given orbitz.com is loaded and the home page is visible
     When flights button is pressed
     And multi-city flights button is pressed
@@ -13,3 +13,7 @@ Feature: test ability to search for multi-city flights on the Orbitz.com home pa
     And 2 children flying are selected
     And age of child 1 is selected
     And age of child 2 is selected
+    And LAX is inputted into Flying from tab 2
+    And LAX airport is selected
+    And CHI is inputted into Flying to tab 2
+    And CHI airport is selected
