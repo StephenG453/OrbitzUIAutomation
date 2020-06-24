@@ -95,4 +95,35 @@ public class HomePageStepDefinitions {
     public void selectCHIAirport() {
         homePage.selectCHIAirport();
     }
+
+    @And("flight 2 departure date is inputted")
+    public void inputFlight2DepartureDate() {
+        homePage.inputFlight2DepartureDate();
+    }
+
+    @And("add another flight button is pressed")
+    public void pressAddAnotherFlightButton() {
+        homePage.pressAddAnotherFlightButton();
+    }
+
+    @And("CHI is inputted into Flying from tab 3")
+    public void inputFlyingFromTab3Value() {
+        homePage.inputFlyingFromTab3Value();
+    }
+
+    @And("DFW is inputted into Flying to tab 3")
+    public void inputFlyingToTab3Value() {
+        homePage.inputFlyingToTab3Value();
+    }
+
+    @And("flight 3 departure date is inputted")
+    public void inputFlight3DepartureDate() {
+        homePage.inputFlight3DepartureDate();
+    }
+
+    @And("search button is pressed")
+    public void searchButtonIsPressed() {
+        homePage.pressSearchButton();
+    }
+
 }

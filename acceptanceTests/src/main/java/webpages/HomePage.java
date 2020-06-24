@@ -32,6 +32,24 @@ public class HomePage extends WebDriverInitiation {
     @FindBy(xpath = "//input[@id='flight-2-destination-hp-flight']")
     private WebElement flyingToTab2;
 
+    @FindBy(xpath = "//input[@id='flight-2-departing-hp-flight']")
+    private WebElement flight2DepartureDate;
+
+    @FindBy(xpath = "//a[@id='add-flight-leg-hp-flight']")
+    private WebElement addAnotherFlightButton;
+
+    @FindBy(xpath = "//input[@id='flight-3-origin-hp-flight']")
+    private WebElement flyingFromTab3;
+
+    @FindBy(xpath = "//input[@id='flight-3-destination-hp-flight']")
+    private WebElement flyingToTab3;
+
+    @FindBy(xpath = "//input[@id='flight-3-departing-hp-flight']")
+    private WebElement flight3DepartureDate;
+
+    @FindBy(xpath = "//form[@id='gcw-flights-form-hp-flight']//button[contains(@class,'btn-primary btn-action gcw-submit')]")
+    private WebElement searchButton;
+
 //    public boolean isAtHomePage() {
 //        return pageHeader.isDisplayed();
 //    }
@@ -108,10 +126,10 @@ public class HomePage extends WebDriverInitiation {
         flyingFromTab2.sendKeys("LAX");
     }
 
-    public void selectFlyingFromTab2Value() {
-        WebElement laxAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Los Angeles (LAX - Los Angeles Intl.)')]"));
-        laxAirportSelection.click();
-    }
+//    public void selectFlyingFromTab2Value() {
+//        WebElement laxAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Los Angeles (LAX - Los Angeles Intl.)')]"));
+//        laxAirportSelection.click();
+//    }
 
     public void inputFlyingToTab2Value() {
         flyingToTab2.sendKeys("CHI");
@@ -120,5 +138,29 @@ public class HomePage extends WebDriverInitiation {
     public void selectCHIAirport() {
         WebElement chiAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),\"Chicago (ORD - O'Hare Intl.)\")]"));
         chiAirportSelection.click();
+    }
+
+    public void inputFlight2DepartureDate() {
+        flight2DepartureDate.sendKeys("07/08/2020");
+    }
+
+    public void pressAddAnotherFlightButton() {
+        addAnotherFlightButton.click();
+    }
+
+    public void inputFlyingFromTab3Value() {
+        flyingFromTab3.sendKeys("CHI");
+    }
+
+    public void inputFlyingToTab3Value() {
+        flyingToTab3.sendKeys("DFW");
+    }
+
+    public void inputFlight3DepartureDate() {
+        flight3DepartureDate.sendKeys("07/14/2020");
+    }
+
+    public void pressSearchButton() {
+        searchButton.click();
     }
 }

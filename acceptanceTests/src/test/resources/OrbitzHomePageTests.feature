@@ -17,3 +17,11 @@ Feature: test ability to search for multi-city flights on the Orbitz.com home pa
     And LAX airport is selected
     And CHI is inputted into Flying to tab 2
     And CHI airport is selected
+    And flight 2 departure date is inputted
+    And add another flight button is pressed
+    And CHI is inputted into Flying from tab 3
+    And CHI airport is selected
+    And DFW is inputted into Flying to tab 3
+    And DFW airport is selected
+    And flight 3 departure date is inputted
+    And search button is pressed
