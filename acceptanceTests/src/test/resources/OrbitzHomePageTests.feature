@@ -26,12 +26,16 @@ Feature: test ability to search for multi-city flights on the Orbitz.com home pa
     And flight 3 departure date is inputted
     And search button is pressed
     Then the results webpage loads
-    And the number of itineraries for the first flight is outputted
-#    And the nonstop button for the first flight is checked
-#    And the first flight is selected
-#    And the number of itineraries for the second flight is outputted
-#    And the nonstop button for the second flight is checked
-#    And the second is selected
-#    And the number of itineraries for the third flight is outputted
-#    And the nonstop button for the third flight is checked
-#    And the third flight is selected
+    And the number of itineraries is outputted
+    And the nonstop button is checked
+    And the first flight is selected
+    And select this fare button is clicked
+    And the number of itineraries is outputted
+    And the nonstop button is checked
+    And the first flight is selected
+    And select this fare button is clicked
+    And the number of itineraries is outputted
+    And the nonstop button is checked
+    And the first flight is selected
+    And select this fare button is clicked
+    And page is scrolled to the bottom to validate the itinerary

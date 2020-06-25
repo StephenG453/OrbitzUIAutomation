@@ -15,8 +15,28 @@ public class SearchResultsPageStepDefinitions {
         Assertions.assertTrue(searchResultsPage.isAt());
     }
 
-    @And("the number of itineraries for the first flight is outputted")
+    @And("the number of itineraries is outputted")
     public void getNumberOfItinerariesForFirstFlight() {
         searchResultsPage.getNumberOfItineraries();
+    }
+
+    @And("the nonstop button is checked")
+    public void pressNonstopButton() {
+        searchResultsPage.pressNonStopButton();
+    }
+
+    @And("the first flight is selected")
+    public void selectFirstFlight() {
+        searchResultsPage.selectFirstListedFlight();
+    }
+
+    @And("select this fare button is clicked")
+    public void pressSelectThisFareButton() {
+        searchResultsPage.pressSelectThisFareButton();
+    }
+
+    @And("page is scrolled to the bottom to validate the itinerary")
+    public void scrollToPageBottom() {
+        searchResultsPage.scrollToPageBottom();
     }
 }
