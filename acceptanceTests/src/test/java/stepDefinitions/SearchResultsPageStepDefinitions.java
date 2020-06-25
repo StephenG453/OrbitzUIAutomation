@@ -34,9 +34,4 @@ public class SearchResultsPageStepDefinitions {
     public void pressSelectThisFareButton() {
         searchResultsPage.pressSelectThisFareButton();
     }
-
-    @And("page is scrolled to the bottom to validate the itinerary")
-    public void scrollToPageBottom() {
-        searchResultsPage.scrollToPageBottom();
-    }
 }

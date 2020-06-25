@@ -70,11 +70,6 @@ public class HomePage extends WebDriverInitiation {
         flyingFromTab1.sendKeys("DFW");
     }
 
-//    public void selectFlyingFromTab1Value() {
-//        WebElement dfwAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Dallas (DFW - Dallas-Fort Worth Intl.)')]"));
-//        dfwAirportSelection.click();
-//    }
-
     public void selectDFWAirport() {
         WebElement dfwAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Dallas (DFW - Dallas-Fort Worth Intl.)')]"));
         dfwAirportSelection.click();
@@ -83,11 +78,6 @@ public class HomePage extends WebDriverInitiation {
     public void inputFlyingToTab1Value() {
         flyingToTab1.sendKeys("LAX");
     }
-
-//    public void selectFlyingToTab1Value() {
-//        WebElement laxAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Los Angeles (LAX - Los Angeles Intl.)')]"));
-//        laxAirportSelection.click();
-//    }
 
     public void selectLAXAirport() {
         WebElement laxAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Los Angeles (LAX - Los Angeles Intl.)')]"));
@@ -125,11 +115,6 @@ public class HomePage extends WebDriverInitiation {
     public void inputFlyingFromTab2Value() {
         flyingFromTab2.sendKeys("LAX");
     }
-
-//    public void selectFlyingFromTab2Value() {
-//        WebElement laxAirportSelection = driver.findElement(By.xpath("//strong[contains(text(),'Los Angeles (LAX - Los Angeles Intl.)')]"));
-//        laxAirportSelection.click();
-//    }
 
     public void inputFlyingToTab2Value() {
         flyingToTab2.sendKeys("CHI");
