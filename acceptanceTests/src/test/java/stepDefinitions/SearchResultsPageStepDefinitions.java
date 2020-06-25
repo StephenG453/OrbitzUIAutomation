@@ -15,10 +15,10 @@ public class SearchResultsPageStepDefinitions {
         Assertions.assertTrue(searchResultsPage.isAt());
     }
 
-    @And("the number of itineraries is outputted")
-    public void getNumberOfItinerariesForFirstFlight() {
-        searchResultsPage.getNumberOfItineraries();
-    }
+//    @And("the number of itineraries is outputted")
+//    public void getNumberOfItinerariesForFirstFlight() {
+//        searchResultsPage.getNumberOfItineraries();
+//    }
 
     @And("the nonstop button is checked")
     public void pressNonstopButton() {
@@ -34,4 +34,9 @@ public class SearchResultsPageStepDefinitions {
     public void pressSelectThisFareButton() {
         searchResultsPage.pressSelectThisFareButton();
     }
+
+//    @And("Trip Details tab is opened")
+//    public void goToTripDetailsTab() {
+//
+//    }
 }
