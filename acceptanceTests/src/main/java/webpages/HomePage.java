@@ -8,51 +8,49 @@ import org.openqa.selenium.support.ui.Select;
 
 public class HomePage extends WebDriverInitiation {
 
-//    @FindBy(xpath = "")
-//    private WebElement pageheader;
-
-    @FindBy(xpath = "//button[@id='tab-flight-tab-hp']//span[@class='icon icon-flights']")
+    @FindBy(id = "tab-flight-tab-hp")
     private WebElement flightsButton;
 
-    @FindBy(xpath = "//label[@id='flight-type-multi-dest-label-hp-flight']")
+    @FindBy(id = "flight-type-multi-dest-label-hp-flight")
     private WebElement multiCityFlightsButton;
 
-    @FindBy(xpath = "//input[@id='flight-origin-hp-flight']")
+    @FindBy(id = "flight-origin-hp-flight")
     private WebElement flyingFromTab1;
 
-    @FindBy(xpath = "//input[@id='flight-destination-hp-flight']")
+    @FindBy(id = "flight-destination-hp-flight")
     private WebElement flyingToTab1;
 
-    @FindBy(xpath = "//input[@id='flight-departing-single-hp-flight']")
+    @FindBy(id = "flight-departing-single-hp-flight")
     private WebElement flight1DepartureDate;
 
-    @FindBy(xpath = "//input[@id='flight-2-origin-hp-flight']")
+    @FindBy(id = "flight-2-origin-hp-flight")
     private WebElement flyingFromTab2;
 
-    @FindBy(xpath = "//input[@id='flight-2-destination-hp-flight']")
+    @FindBy(id = "flight-2-destination-hp-flight")
     private WebElement flyingToTab2;
 
-    @FindBy(xpath = "//input[@id='flight-2-departing-hp-flight']")
+    @FindBy(id = "flight-2-departing-hp-flight")
     private WebElement flight2DepartureDate;
 
-    @FindBy(xpath = "//a[@id='add-flight-leg-hp-flight']")
+    @FindBy(id = "add-flight-leg-hp-flight")
     private WebElement addAnotherFlightButton;
 
-    @FindBy(xpath = "//input[@id='flight-3-origin-hp-flight']")
+    @FindBy(id = "flight-3-origin-hp-flight")
     private WebElement flyingFromTab3;
 
-    @FindBy(xpath = "//input[@id='flight-3-destination-hp-flight']")
+    @FindBy(id = "flight-3-destination-hp-flight")
     private WebElement flyingToTab3;
 
-    @FindBy(xpath = "//input[@id='flight-3-departing-hp-flight']")
+    @FindBy(id = "flight-3-departing-hp-flight")
     private WebElement flight3DepartureDate;
 
     @FindBy(xpath = "//form[@id='gcw-flights-form-hp-flight']//button[contains(@class,'btn-primary btn-action gcw-submit')]")
     private WebElement searchButton;
 
-//    public boolean isAtHomePage() {
-//        return pageHeader.isDisplayed();
-//    }
+    public boolean isAt() {
+//        return driver.getCurrentUrl().contains("www.orbitz.com/Flights-Search");
+        return driver.getCurrentUrl().contentEquals("https://www.orbitz.com/");
+    }
 
     public HomePage(WebDriver driver) {
         super(driver);
