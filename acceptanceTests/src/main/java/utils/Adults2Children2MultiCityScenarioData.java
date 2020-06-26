@@ -13,7 +13,7 @@ public class Adults2Children2MultiCityScenarioData {
 
     private static final Calendar FLIGHT_DATE_CALENDAR = Calendar.getInstance();
     private static final DateFormat FORMATTER = new SimpleDateFormat("MM/dd/yyyy");
-    static Date flightDate = new Date();
+    private static Date flightDate = new Date();
 
     public static String getFlight1Date() {
         return FORMATTER.format(flightDate);
