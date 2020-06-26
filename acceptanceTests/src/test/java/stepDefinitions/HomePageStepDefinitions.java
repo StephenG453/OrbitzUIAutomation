@@ -3,6 +3,7 @@ package stepDefinitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import webpages.HomePage;
 import webpages.WebDriverInitiation;
@@ -22,6 +23,8 @@ public class HomePageStepDefinitions {
 
         driver = webDriverInitiation.driver;
         homePage = new HomePage(driver);
+
+        Assertions.assertTrue(homePage.isAt());
     }
 
     @When("flights button is pressed")
