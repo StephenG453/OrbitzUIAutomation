@@ -5,8 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import utils.Adults2Children2MultiCityScenarioData;
 
 public class HomePage extends WebDriverInitiation {
+
+    Adults2Children2MultiCityScenarioData scenarioData;
 
     @FindBy(id = "tab-flight-tab-hp")
     private WebElement flightsButton;
@@ -48,7 +51,6 @@ public class HomePage extends WebDriverInitiation {
     private WebElement searchButton;
 
     public boolean isAt() {
-//        return driver.getCurrentUrl().contains("www.orbitz.com/Flights-Search");
         return driver.getCurrentUrl().contentEquals("https://www.orbitz.com/");
     }
 
@@ -65,7 +67,7 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlyingFromTab1Value() {
-        flyingFromTab1.sendKeys("DFW");
+        flyingFromTab1.sendKeys(Adults2Children2MultiCityScenarioData.CITY_A);
     }
 
     public void selectDFWAirport() {
@@ -74,7 +76,7 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlyingToTab1Value() {
-        flyingToTab1.sendKeys("LAX");
+        flyingToTab1.sendKeys(Adults2Children2MultiCityScenarioData.CITY_B);
     }
 
     public void selectLAXAirport() {
@@ -83,17 +85,13 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlight1DepartureDate() {
-        flight1DepartureDate.sendKeys("07/01/2020");
+        flight1DepartureDate.sendKeys((Adults2Children2MultiCityScenarioData.getFlight1Date()));
     }
 
     public void selectNumberOfAdults() {
         Select adultsDropdown = new Select(driver.findElement(By.xpath("//select[@id='flight-adults-hp-flight']")));
         adultsDropdown.selectByIndex(1);
     }
-
-    /*
-        I know beforehand that we are selecting 2 children... however in a real life scenario we might not know
-     */
 
     public void selectNumberOfChildren() {
         Select childrenDropdown = new Select(driver.findElement(By.xpath("//select[@id='flight-children-hp-flight']")));
@@ -111,11 +109,11 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlyingFromTab2Value() {
-        flyingFromTab2.sendKeys("LAX");
+        flyingFromTab2.sendKeys(Adults2Children2MultiCityScenarioData.CITY_B);
     }
 
     public void inputFlyingToTab2Value() {
-        flyingToTab2.sendKeys("CHI");
+        flyingToTab2.sendKeys(Adults2Children2MultiCityScenarioData.CITY_C);
     }
 
     public void selectCHIAirport() {
@@ -124,7 +122,7 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlight2DepartureDate() {
-        flight2DepartureDate.sendKeys("07/08/2020");
+        flight2DepartureDate.sendKeys(Adults2Children2MultiCityScenarioData.getFlight2Date());
     }
 
     public void pressAddAnotherFlightButton() {
@@ -132,15 +130,15 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlyingFromTab3Value() {
-        flyingFromTab3.sendKeys("CHI");
+        flyingFromTab3.sendKeys(Adults2Children2MultiCityScenarioData.CITY_C);
     }
 
     public void inputFlyingToTab3Value() {
-        flyingToTab3.sendKeys("DFW");
+        flyingToTab3.sendKeys(Adults2Children2MultiCityScenarioData.CITY_A);
     }
 
     public void inputFlight3DepartureDate() {
-        flight3DepartureDate.sendKeys("07/14/2020");
+        flight3DepartureDate.sendKeys(Adults2Children2MultiCityScenarioData.getFlight3Date());
     }
 
     public void pressSearchButton() {
