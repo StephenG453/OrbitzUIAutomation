@@ -67,7 +67,6 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlyingFromTab1Value(String input) {
-//        flyingFromTab1.sendKeys(Adults2Children2MultiCityScenarioData.CITY_A);
         flyingFromTab1.sendKeys(input);
     }
 
@@ -77,7 +76,6 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlyingToTab1Value(String input) {
-//        flyingToTab1.sendKeys(Adults2Children2MultiCityScenarioData.CITY_B);
         flyingToTab1.sendKeys(input);
     }
 
@@ -87,7 +85,6 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlight1DepartureDate(String input) {
-//        flight1DepartureDate.sendKeys((Adults2Children2MultiCityScenarioData.getFlight1Date()));
         flight1DepartureDate.sendKeys(input);
     }
 
@@ -112,12 +109,10 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlyingFromTab2Value(String input) {
-//        flyingFromTab2.sendKeys(Adults2Children2MultiCityScenarioData.CITY_B);
         flyingFromTab2.sendKeys(input);
     }
 
     public void inputFlyingToTab2Value(String input) {
-//        flyingToTab2.sendKeys(Adults2Children2MultiCityScenarioData.CITY_C);
         flyingToTab2.sendKeys(input);
     }
 
@@ -127,7 +122,6 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlight2DepartureDate(String input) {
-//        flight2DepartureDate.sendKeys(Adults2Children2MultiCityScenarioData.getFlight2Date());
         flight2DepartureDate.sendKeys(input);
     }
 
@@ -136,17 +130,14 @@ public class HomePage extends WebDriverInitiation {
     }
 
     public void inputFlyingFromTab3Value(String input) {
-//        flyingFromTab3.sendKeys(Adults2Children2MultiCityScenarioData.CITY_C);
         flyingFromTab3.sendKeys(input);
     }
 
     public void inputFlyingToTab3Value(String input) {
-//        flyingToTab3.sendKeys(Adults2Children2MultiCityScenarioData.CITY_A);
         flyingToTab3.sendKeys(input);
     }
 
     public void inputFlight3DepartureDate(String input) {
-//        flight3DepartureDate.sendKeys(Adults2Children2MultiCityScenarioData.getFlight3Date());
         flight3DepartureDate.sendKeys(input);
     }
 
