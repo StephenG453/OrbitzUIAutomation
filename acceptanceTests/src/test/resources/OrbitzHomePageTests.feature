@@ -39,3 +39,4 @@ Feature: test ability to search for multi-city flights on the Orbitz.com home pa
     And the first flight is selected
     And select this fare button is clicked
     And Trip Details page is opened
+    And all pages are closed
