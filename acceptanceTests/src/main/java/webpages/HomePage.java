@@ -66,8 +66,9 @@ public class HomePage extends WebDriverInitiation {
         multiCityFlightsButton.click();
     }
 
-    public void inputFlyingFromTab1Value() {
-        flyingFromTab1.sendKeys(Adults2Children2MultiCityScenarioData.CITY_A);
+    public void inputFlyingFromTab1Value(String input) {
+//        flyingFromTab1.sendKeys(Adults2Children2MultiCityScenarioData.CITY_A);
+        flyingFromTab1.sendKeys(input);
     }
 
     public void selectDFWAirport() {
@@ -75,8 +76,9 @@ public class HomePage extends WebDriverInitiation {
         dfwAirportSelection.click();
     }
 
-    public void inputFlyingToTab1Value() {
-        flyingToTab1.sendKeys(Adults2Children2MultiCityScenarioData.CITY_B);
+    public void inputFlyingToTab1Value(String input) {
+//        flyingToTab1.sendKeys(Adults2Children2MultiCityScenarioData.CITY_B);
+        flyingToTab1.sendKeys(input);
     }
 
     public void selectLAXAirport() {
@@ -84,8 +86,9 @@ public class HomePage extends WebDriverInitiation {
         laxAirportSelection.click();
     }
 
-    public void inputFlight1DepartureDate() {
-        flight1DepartureDate.sendKeys((Adults2Children2MultiCityScenarioData.getFlight1Date()));
+    public void inputFlight1DepartureDate(String input) {
+//        flight1DepartureDate.sendKeys((Adults2Children2MultiCityScenarioData.getFlight1Date()));
+        flight1DepartureDate.sendKeys(input);
     }
 
     public void selectNumberOfAdults() {
@@ -108,12 +111,14 @@ public class HomePage extends WebDriverInitiation {
         child2AgeDropdown.selectByIndex(5);
     }
 
-    public void inputFlyingFromTab2Value() {
-        flyingFromTab2.sendKeys(Adults2Children2MultiCityScenarioData.CITY_B);
+    public void inputFlyingFromTab2Value(String input) {
+//        flyingFromTab2.sendKeys(Adults2Children2MultiCityScenarioData.CITY_B);
+        flyingFromTab2.sendKeys(input);
     }
 
-    public void inputFlyingToTab2Value() {
-        flyingToTab2.sendKeys(Adults2Children2MultiCityScenarioData.CITY_C);
+    public void inputFlyingToTab2Value(String input) {
+//        flyingToTab2.sendKeys(Adults2Children2MultiCityScenarioData.CITY_C);
+        flyingToTab2.sendKeys(input);
     }
 
     public void selectCHIAirport() {
@@ -121,24 +126,28 @@ public class HomePage extends WebDriverInitiation {
         chiAirportSelection.click();
     }
 
-    public void inputFlight2DepartureDate() {
-        flight2DepartureDate.sendKeys(Adults2Children2MultiCityScenarioData.getFlight2Date());
+    public void inputFlight2DepartureDate(String input) {
+//        flight2DepartureDate.sendKeys(Adults2Children2MultiCityScenarioData.getFlight2Date());
+        flight2DepartureDate.sendKeys(input);
     }
 
     public void pressAddAnotherFlightButton() {
         addAnotherFlightButton.click();
     }
 
-    public void inputFlyingFromTab3Value() {
-        flyingFromTab3.sendKeys(Adults2Children2MultiCityScenarioData.CITY_C);
+    public void inputFlyingFromTab3Value(String input) {
+//        flyingFromTab3.sendKeys(Adults2Children2MultiCityScenarioData.CITY_C);
+        flyingFromTab3.sendKeys(input);
     }
 
-    public void inputFlyingToTab3Value() {
-        flyingToTab3.sendKeys(Adults2Children2MultiCityScenarioData.CITY_A);
+    public void inputFlyingToTab3Value(String input) {
+//        flyingToTab3.sendKeys(Adults2Children2MultiCityScenarioData.CITY_A);
+        flyingToTab3.sendKeys(input);
     }
 
-    public void inputFlight3DepartureDate() {
-        flight3DepartureDate.sendKeys(Adults2Children2MultiCityScenarioData.getFlight3Date());
+    public void inputFlight3DepartureDate(String input) {
+//        flight3DepartureDate.sendKeys(Adults2Children2MultiCityScenarioData.getFlight3Date());
+        flight3DepartureDate.sendKeys(input);
     }
 
     public void pressSearchButton() {
