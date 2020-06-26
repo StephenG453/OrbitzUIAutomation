@@ -16,7 +16,7 @@ public class HomePageStepDefinitions {
     private HomePage homePage;
 
     @Given("orbitz.com is loaded and the home page is visible")
-    public void initializeDriverAndOpenOrbitz() { //split this... dont have a method do 2 different actions
+    public void initializeDriverAndOpenOrbitz() {
         webDriverInitiation = new WebDriverInitiation(driver);
         webDriverInitiation.initialize();
         webDriverInitiation.loadWebPage();
@@ -44,7 +44,6 @@ public class HomePageStepDefinitions {
 
     @And("DFW airport is selected")
     public void selectDFWAirport() {
-//        homePage.selectFlyingFromTab1Value();
         homePage.selectDFWAirport();
     }
 
@@ -55,7 +54,6 @@ public class HomePageStepDefinitions {
 
     @And("LAX airport is selected")
     public void selectLAXAirport() {
-//        homePage.selectFlyingToTab1Value();
         homePage.selectLAXAirport();
     }
 

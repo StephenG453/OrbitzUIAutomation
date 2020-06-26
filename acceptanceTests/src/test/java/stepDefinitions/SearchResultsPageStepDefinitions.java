@@ -34,9 +34,4 @@ public class SearchResultsPageStepDefinitions {
     public void pressSelectThisFareButton() {
         searchResultsPage.pressSelectThisFareButton();
     }
-
-//    @And("Trip Details tab is opened")
-//    public void goToTripDetailsTab() {
-//
-//    }
 }
