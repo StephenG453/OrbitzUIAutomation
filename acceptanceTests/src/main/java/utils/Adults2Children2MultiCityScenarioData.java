@@ -16,6 +16,9 @@ public class Adults2Children2MultiCityScenarioData {
     private static Date flightDate = new Date();
 
     public static String getFlight1Date() {
+        FLIGHT_DATE_CALENDAR.add(Calendar.DAY_OF_MONTH, 4);
+        flightDate = FLIGHT_DATE_CALENDAR.getTime();
+
         return FORMATTER.format(flightDate);
     }
 
