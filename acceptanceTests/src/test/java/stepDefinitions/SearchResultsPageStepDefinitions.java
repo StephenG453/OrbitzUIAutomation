@@ -15,10 +15,10 @@ public class SearchResultsPageStepDefinitions {
         Assertions.assertTrue(searchResultsPage.isAt());
     }
 
-//    @And("the number of itineraries is outputted")
-//    public void getNumberOfItinerariesForFirstFlight() {
-//        searchResultsPage.getNumberOfItineraries();
-//    }
+    @And("the number of itineraries is outputted")
+    public void getNumberOfItinerariesForFirstFlight() {
+        searchResultsPage.getNumberOfItineraries();
+    }
 
     @And("the nonstop button is checked")
     public void pressNonstopButton() {
