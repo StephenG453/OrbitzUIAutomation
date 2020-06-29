@@ -18,11 +18,10 @@ public class SearchResultsPage extends WebDriverInitiation {
 
     public void getNumberOfItineraries() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@id='flightModuleList']")));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("flightModuleList")));
 
         List<WebElement> itineraries = driver.findElements(By.xpath("//h3[contains(text(),'Result')]"));
-        System.out.println("All itineraries available: " + itineraries.size());
+        System.out.println("All flights available for this city: " + itineraries.size());
     }
 
     public void pressNonStopButton() {
@@ -48,7 +47,7 @@ public class SearchResultsPage extends WebDriverInitiation {
 
     public void selectFirstListedFlight() {
         int attempts = 0;
-        while (attempts < 2) {
+        while (attempts < 5) {
             try {
                 WebDriverWait wait = new WebDriverWait(driver, 10);
                 WebElement selectButtonForFirstFlight = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[1]//div[1]//div[2]//div[2]//div[1]//div[2]//button[1]")));
@@ -59,6 +58,9 @@ public class SearchResultsPage extends WebDriverInitiation {
             }
             catch (NoSuchElementException e) {
                 System.out.println("No Such Element Found");
+            }
+            catch (TimeoutException e) {
+                System.out.println("Timeout on trying to find the Element");
             }
             attempts++;
         }
@@ -77,6 +79,11 @@ public class SearchResultsPage extends WebDriverInitiation {
              }
              catch (NoSuchElementException e) {
                  System.out.println("No Such Element Found");
+             }
+             catch (TimeoutException e) {
+                 WebDriverWait wait = new WebDriverWait(driver, 10);
+                 WebElement selectButtonForFirstFlight = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[1]//div[1]//div[2]//div[2]//div[1]//div[2]//button[1]")));
+                 selectButtonForFirstFlight.click();
              }
              attempts++;
          }
