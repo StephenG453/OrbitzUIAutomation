@@ -1,1 +1,4 @@
-adding a readme
+To setup and run the project:
+    - The project should be compile-and-run ready upon cloning it, however if the dependencies need to be added
+    just copy the same dependencies used in this pom.xml
+    - if your IDE has a Maven plugin then make sure you have that installed
